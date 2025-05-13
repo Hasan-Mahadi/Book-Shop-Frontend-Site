@@ -9,6 +9,7 @@ import BlogSection from '../BlogSection';
 import Offers from './Offers';
 import HomeCategories from './CategorySection ';
 import TestimonialSection from './TestimonialSection';
+import Newssection from './Newssection';
 
 const Home = () => {
   useEffect(() => {
@@ -39,6 +40,7 @@ const Home = () => {
       </div>
 
       <Benner></Benner>
+      <Newssection/>
     </div>
   );
 };

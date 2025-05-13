@@ -52,7 +52,7 @@ export default function SpecialOffers() {
   ];
 
   return (
-    <section className="lg:p-30 lg:-mt-28  ">
+    <section className="lg:p-30 lg:-mt-28 container mx-auto ">
       <div className="container mx-auto px-4">
         <div
           className="text-center mb-14"

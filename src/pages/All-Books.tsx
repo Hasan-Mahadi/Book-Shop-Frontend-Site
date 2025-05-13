@@ -5,7 +5,7 @@ import {
   useUpdateProductMutation,
 } from '@/redux/features/auth/authApi';
 import { FaStar } from 'react-icons/fa';
-import { useAuth } from '@/redux/useAuth';
+// import { useAuth } from '@/redux/useAuth';
 import { useNavigate } from 'react-router-dom';
 import AOS from 'aos';
 
@@ -15,7 +15,7 @@ const AllBooks = () => {
   }, []);
 
   const navigate = useNavigate();
-  const { isAuthenticated } = useAuth();
+  // const { isAuthenticated } = useAuth();
   // State for pagination and filters
   const [page, setPage] = useState(1);
   const [limit, setLimit] = useState(20); // Set default limit to 20
@@ -116,17 +116,22 @@ const AllBooks = () => {
     setLimit(20); // Reset to default limit of 20
   };
 
+  // const handleViewDetails = (productId: string) => {
+    // if (isAuthenticated) {
+      // navigate(`/products/${productId}`);
+    // } else {
+      // navigate(`/products/${productId}`, {
+        // state: {
+          // from: `/products/${productId}`,
+          // message: 'Please login to view product details',
+        // },
+      // });
+    // }
+  // };
+
+
   const handleViewDetails = (productId: string) => {
-    if (isAuthenticated) {
-      navigate(`/products/${productId}`);
-    } else {
-      navigate('/login', {
-        state: {
-          from: `/products/${productId}`,
-          message: 'Please login to view product details',
-        },
-      });
-    }
+  navigate(`/products/${productId}`);
   };
 
   // Page size options

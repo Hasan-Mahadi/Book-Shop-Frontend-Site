@@ -64,8 +64,8 @@ const TestimonialSection = () => {
   }
 
   return (
-    <section className="py-12 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto px-6">
+    <section className="py-12 bg-gray-50 dark:bg-gray-900 container mx-auto">
+      <div className="container  mx-auto px-6 lg:px-36">
         <div
           className="text-center mb-12"
           data-aos="flip-right"

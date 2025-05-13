@@ -74,7 +74,7 @@ const CategorySection = () => {
   };
 
   return (
-    <section className="lg:py-10 lg:pb-28 lg:-mt-14  bg-gradient-to-b from-gray-200 to-white dark:from-gray-900 dark:to-gray-800">
+    <section className="lg:py-10 lg:pb-28 lg:-mt-14 container mx-auto bg-gradient-to-b from-gray-200 to-white dark:from-gray-900 dark:to-gray-800">
       <div
         className="container mx-auto px-4 sm:px-6 lg:px-8"
         data-aos="flip-right"

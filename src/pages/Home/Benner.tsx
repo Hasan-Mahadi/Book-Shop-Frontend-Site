@@ -197,7 +197,7 @@ const Banner: React.FC = () => {
   );
 
   return (
-    <div className="relative mt-0 flex justify-center">
+    <div className="relative mt-0 flex justify-center container mx-auto">
       {renderCarousel()}
 
       {/* Details Dialog */}

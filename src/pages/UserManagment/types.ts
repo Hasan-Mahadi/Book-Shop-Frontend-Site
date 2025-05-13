@@ -1,4 +1,7 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export interface UserD {
+  length: number;
+  filter: any;
   _id: string;
   name: string;
   email: string;

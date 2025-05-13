@@ -5,6 +5,9 @@ import { useNavigate } from 'react-router-dom';
 
 import ErrorMessage from '@/utils/ErrorMessage';
 import LoadingSpinner from '@/utils/LoadingSpinner';
+import { useSelector } from 'react-redux';
+import { RootState } from '@/redux/store'; // আপনার রিডাক্স স্টোরের টাইপ
+
 
 // Define the Product type
 interface Product {
@@ -30,15 +33,30 @@ const ProductDetails = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const { data, isLoading, error } = useGetProductQuery(id || '');
+  const user = useSelector((state: RootState) => state.auth.user);
+
 
   // Access the product data directly from data (not data.result)
   const product = (data as unknown as ApiResponse)?.result;
 
+  // const handleBuyNow = () => {
+    // if (product) {
+      // navigate('/checkout', { state: { product } });
+    // }
+  // };
+
+
   const handleBuyNow = () => {
-    if (product) {
-      navigate('/checkout', { state: { product } });
-    }
-  };
+  if (!user) {
+    navigate('/login', { state: { from: `/product/${id}` } });
+    return;
+  }
+
+  if (product) {
+    navigate('/checkout', { state: { product } });
+  }
+};
+
 
   if (isLoading) return <LoadingSpinner />;
   if (error) return <ErrorMessage message="Failed to load product details" />;

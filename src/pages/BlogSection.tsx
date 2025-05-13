@@ -62,7 +62,7 @@ export default function BlogSection() {
   }, []);
 
   return (
-    <section className="lg:p-30 lg:pt-8  lg:-mt-14 lg:pb-8 bg-gray-200 dark:bg-black ">
+    <section className="lg:p-30 lg:pt-8 container mx-auto  lg:-mt-14 lg:pb-8 bg-gray-200 dark:bg-black ">
       <div className="container mx-auto px-6 ">
         <div
           className="text-center mb-12"

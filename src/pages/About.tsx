@@ -99,7 +99,7 @@ const About = () => {
                 <FaBookOpen className="text-indigo-600 dark:text-blue-400 text-2xl" />
               </div>
               <h2 className="text-2xl font-semibold text-gray-900 dark:text-white">
-                Our Vision
+                Our Vision.
               </h2>
             </div>
             <p className="text-gray-700 dark:text-gray-300 mb-6">
